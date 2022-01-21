@@ -13,8 +13,8 @@ waitingInput = True
 
 while waitingInput:
     waitingInput = input("Seconds:")
-    nx.press_buttons(controller_idx, [nxbt.Buttons.B], down=waitingInput)
-    nx.tilt_stick(controller_idx, Sticks.RIGHT_STICK, -100, 0, tilted=waitingInput)
+    nx.press_buttons(controller_index, [nxbt.Buttons.B], down=waitingInput)
+    nx.tilt_stick(controller_index, Sticks.RIGHT_STICK, -100, 0, tilted=waitingInput)
     if(waitingInput == "exit"):
         waitingInput = False
 
