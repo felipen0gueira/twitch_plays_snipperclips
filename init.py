@@ -15,8 +15,20 @@ waitingInput = True
 
 while waitingInput:
     waitingInput = input("Seconds:")
+    print("Sticks.LEFT_STICK")
+    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, -100, 0, tilted=4.5)
+    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 100, 0, tilted=4.5)
+    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, -100, tilted=4.5)
+    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, -100, tilted=4.5)
+    
+    print("Sticks.RIGHT_STICK")
+    nx.tilt_stick(controller_index, Sticks.RIGHT_STICK, -100, 0, tilted=4.5)
+    nx.tilt_stick(controller_index, Sticks.RIGHT_STICK, 100, 0, tilted=4.5)
+    nx.tilt_stick(controller_index, Sticks.RIGHT_STICK, 0, -100, tilted=4.5)
+    nx.tilt_stick(controller_index, Sticks.RIGHT_STICK, 0, -100, tilted=4.5)
+
     nx.press_buttons(controller_index, [nxbt.Buttons.B], down=waitingInput)
-    nx.tilt_stick(controller_index, Sticks.RIGHT_STICK, -100, 0, tilted=waitingInput)
+
     if(waitingInput == "exit"):
         waitingInput = False
 
