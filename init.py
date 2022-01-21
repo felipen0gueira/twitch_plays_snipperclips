@@ -1,4 +1,6 @@
 import nxbt
+from nxbt import Buttons
+from nxbt import Sticks
 import time
 
 nx = nxbt.Nxbt()
