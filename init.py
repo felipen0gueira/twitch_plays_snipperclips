@@ -8,10 +8,14 @@ nx.wait_for_connection(controller_index)
 
 print("Connected")
 
-time.sleep(10)
 
-nx.press_buttons(controller_idx, [nxbt.Buttons.B], down=1.0)
+waitingInput = True
 
-nx.tilt_stick(controller_idx, Sticks.RIGHT_STICK, -100, 0, tilted=2.0)
+while waitingInput:
+    waitingInput = input("Seconds:")
+    nx.press_buttons(controller_idx, [nxbt.Buttons.B], down=waitingInput)
+    nx.tilt_stick(controller_idx, Sticks.RIGHT_STICK, -100, 0, tilted=waitingInput)
+    if(waitingInput == "exit"):
+        waitingInput = False
 
 
