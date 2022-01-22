@@ -63,12 +63,24 @@ while waitingInput:
     btPack = nx.create_input_packet()
     lStick = btPack["L_STICK"]
     lStick["LS_LEFT"] = True
-    lStick["X_VALUE"] = 100
+    lStick["X_VALUE"] = -100
     btPack["L_STICK"] = lStick
-    btPack["A"] = True
+    btPack["B"] = True
 
     for x in range(120):
         nx.set_controller_input( controller_index, btPack)
+
+    
+    btPack = nx.create_input_packet()
+    lStick = btPack["L_STICK"]
+    lStick["LS_RIGHT"] = True
+    lStick["X_VALUE"] = 100
+    btPack["L_STICK"] = lStick
+    btPack["B"] = True
+
+    for x in range(120):
+        nx.set_controller_input( controller_index, btPack)
+
 
 
 
