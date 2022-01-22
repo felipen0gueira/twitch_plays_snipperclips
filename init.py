@@ -59,7 +59,7 @@ while waitingInput:
     #print("nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, 100, tilted=1.5)")
     #nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, 100, tilted=5,  released=0.1, block=False)
     #nx.press_buttons(controller_index, [nxbt.Buttons.B, nxbt.Buttons.L], down=waitingInput, up=0.1, block=False)
-    if waitingInput == 1:
+    if waitingInput == "1":
 
         btPack = nx.create_input_packet()
         lStick = btPack["L_STICK"]
@@ -76,7 +76,7 @@ while waitingInput:
         nx.set_controller_input( controller_index, btPack)
 
 
-    if waitingInput == 2:
+    if waitingInput == "2":
         btPack = nx.create_input_packet()
         lStick = btPack["L_STICK"]
         lStick["LS_RIGHT"] = True
