@@ -67,6 +67,7 @@ while waitingInput:
     btPack["L_STICK"] = lStick
     btPack["B"] = True
 
+    print(btPack)
     for x in range(120):
         nx.set_controller_input( controller_index, btPack)
 
@@ -78,6 +79,7 @@ while waitingInput:
     btPack["L_STICK"] = lStick
     btPack["B"] = True
 
+    print(btPack)
     for x in range(120):
         nx.set_controller_input( controller_index, btPack)
 
