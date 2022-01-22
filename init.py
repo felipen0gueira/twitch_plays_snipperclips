@@ -68,8 +68,11 @@ while waitingInput:
     btPack["B"] = True
 
     print(btPack)
-    for x in range(120):
+    for x in range(220):
         nx.set_controller_input( controller_index, btPack)
+
+    btPack = nx.create_input_packet()
+    nx.set_controller_input( controller_index, btPack)
 
     
     btPack = nx.create_input_packet()
@@ -82,6 +85,10 @@ while waitingInput:
     print(btPack)
     for x in range(120):
         nx.set_controller_input( controller_index, btPack)
+
+    
+    btPack = nx.create_input_packet()
+    nx.set_controller_input( controller_index, btPack)
 
 
 
