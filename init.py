@@ -59,37 +59,37 @@ while waitingInput:
     #print("nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, 100, tilted=1.5)")
     #nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, 100, tilted=5,  released=0.1, block=False)
     #nx.press_buttons(controller_index, [nxbt.Buttons.B, nxbt.Buttons.L], down=waitingInput, up=0.1, block=False)
+    if waitingInput == 1:
 
-    btPack = nx.create_input_packet()
-    lStick = btPack["L_STICK"]
-    lStick["LS_LEFT"] = True
-    lStick["X_VALUE"] = -100
-    btPack["L_STICK"] = lStick
-    btPack["B"] = True
+        btPack = nx.create_input_packet()
+        lStick = btPack["L_STICK"]
+        lStick["LS_LEFT"] = True
+        lStick["X_VALUE"] = -100
+        btPack["L_STICK"] = lStick
+        btPack["B"] = True
 
-    print(btPack)
-    for x in range(220):
+        print(btPack)
+        for x in range(220):
+            nx.set_controller_input( controller_index, btPack)
+
+        btPack = nx.create_input_packet()
         nx.set_controller_input( controller_index, btPack)
 
-    btPack = nx.create_input_packet()
-    nx.set_controller_input( controller_index, btPack)
 
-    time.sleep(2)
+    if waitingInput == 2:
+        btPack = nx.create_input_packet()
+        lStick = btPack["L_STICK"]
+        lStick["LS_RIGHT"] = True
+        lStick["X_VALUE"] = 100
+        btPack["L_STICK"] = lStick
+        btPack["B"] = True
 
-    btPack = nx.create_input_packet()
-    lStick = btPack["L_STICK"]
-    lStick["LS_RIGHT"] = True
-    lStick["X_VALUE"] = 100
-    btPack["L_STICK"] = lStick
-    btPack["B"] = True
+        print(btPack)
+        for x in range(220):
+            nx.set_controller_input( controller_index, btPack)
 
-    print(btPack)
-    for x in range(220):
+        btPack = nx.create_input_packet()
         nx.set_controller_input( controller_index, btPack)
-
-    
-    btPack = nx.create_input_packet()
-    nx.set_controller_input( controller_index, btPack)
 
 
 
