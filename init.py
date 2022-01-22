@@ -74,7 +74,8 @@ while waitingInput:
     btPack = nx.create_input_packet()
     nx.set_controller_input( controller_index, btPack)
 
-    
+    time.sleep(2)
+
     btPack = nx.create_input_packet()
     lStick = btPack["L_STICK"]
     lStick["LS_RIGHT"] = True
@@ -83,7 +84,7 @@ while waitingInput:
     btPack["B"] = True
 
     print(btPack)
-    for x in range(120):
+    for x in range(220):
         nx.set_controller_input( controller_index, btPack)
 
     
