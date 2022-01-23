@@ -53,10 +53,23 @@ def left():
 
 
 def up():
-    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, 100, tilted=1)
+    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, 100, tilted=2)
 
 def down():
-    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, -100, tilted=1)
+    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, -100, tilted=2)
+
+def jump():
+    nx.press_buttons(controller_index, [nxbt.Buttons.B], down=2)
+
+def cut():
+    nx.press_buttons(controller_index, [nxbt.Buttons.A], down=0.1)
+
+def clockwise():
+    nx.press_buttons(controller_index, [nxbt.Buttons.R], down=1)
+
+
+def anticlockwise():
+    nx.press_buttons(controller_index, [nxbt.Buttons.L], down=1)
 
 
 
@@ -129,6 +142,23 @@ while waitingInput:
 
     if waitingInput == "6":
         down()
+
+
+    if waitingInput == "7":
+        jump()
+
+
+    if waitingInput == "8":
+        cut()
+
+
+    if waitingInput == "9":
+        clockwise()
+
+    if waitingInput == "0":
+        anticlockwise()
+
+
 
 
 
