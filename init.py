@@ -123,6 +123,13 @@ while waitingInput:
     if waitingInput == "4":
         left()
 
+    if waitingInput == "5":
+        up()
+
+
+    if waitingInput == "6":
+        down()
+
 
 
 
