@@ -51,18 +51,17 @@ def right():
 def left():
     nx.tilt_stick(controller_index, Sticks.LEFT_STICK, -100, 0, tilted=0.2)
 
-
 def up():
     nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, 100, tilted=2)
 
 def down():
-    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, -100, tilted=2)
+    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, -100, tilted=2, released=0.1, block=False)
 
 def jump():
-    nx.press_buttons(controller_index, [nxbt.Buttons.B], down=2)
+    nx.press_buttons(controller_index, [nxbt.Buttons.B], down=2, up=0.1, block=False)
 
 def cut():
-    nx.press_buttons(controller_index, [nxbt.Buttons.A], down=0.1)
+    nx.press_buttons(controller_index, [nxbt.Buttons.A], down=0.1, up=0.1, block=False)
 
 def clockwise():
     nx.press_buttons(controller_index, [nxbt.Buttons.R], down=0.2)
