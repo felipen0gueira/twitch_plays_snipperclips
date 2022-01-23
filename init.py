@@ -46,10 +46,18 @@ def jumpRight():
         nx.set_controller_input( controller_index, btPack)
 
 def right():
-    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 100, 0, tilted=3)
+    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 100, 0, tilted=0.2)
 
 def left():
-    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, -100, 0, tilted=3)
+    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, -100, 0, tilted=0.2)
+
+
+def up():
+    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, 100, tilted=1)
+
+def down():
+    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, -100, tilted=1)
+
 
 
 
