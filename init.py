@@ -65,11 +65,15 @@ def cut():
     nx.press_buttons(controller_index, [nxbt.Buttons.A], down=0.1)
 
 def clockwise():
-    nx.press_buttons(controller_index, [nxbt.Buttons.R], down=1)
+    nx.press_buttons(controller_index, [nxbt.Buttons.R], down=0.2)
 
 
 def anticlockwise():
-    nx.press_buttons(controller_index, [nxbt.Buttons.L], down=1)
+    nx.press_buttons(controller_index, [nxbt.Buttons.L], down=0.2)
+
+
+def recover():
+    nx.press_buttons(controller_index, [nxbt.Buttons.Y], down=1.5)
 
 
 
