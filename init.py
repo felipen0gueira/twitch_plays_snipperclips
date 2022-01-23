@@ -162,6 +162,8 @@ while waitingInput:
     if waitingInput == "0":
         anticlockwise()
 
+    if waitingInput == "11":
+        recover()
 
 
 
