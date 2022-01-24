@@ -140,6 +140,8 @@ def recover():
 
 waitingInput = True
 
+ready = input("Ready?")
+
 while waitingInput:
     waitingInput = str(random.randint(1, 13))#input("Seconds:")
     print(waitingInput)
