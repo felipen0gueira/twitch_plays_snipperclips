@@ -141,7 +141,7 @@ def recover():
 waitingInput = True
 
 while waitingInput:
-    waitingInput = random.randint(1, 13)#input("Seconds:")
+    waitingInput = str(random.randint(1, 13))#input("Seconds:")
     print(waitingInput)
     time.sleep(2)
 
