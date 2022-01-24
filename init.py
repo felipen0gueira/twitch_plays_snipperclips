@@ -8,11 +8,6 @@ import random
 nx = nxbt.Nxbt()
 
 controller_index = nx.create_controller(nxbt.PRO_CONTROLLER)
-nx.wait_for_connection(controller_index)
-
-print("Connected")
-
-
 
 def jumpLeft():
         print("jumpLeft()")
@@ -135,6 +130,12 @@ def recover():
     print("recover()")
     nx.press_buttons(controller_index, [nxbt.Buttons.Y], down=1.5)
 
+
+nx.wait_for_connection(controller_index)
+
+print("Connected")
+
+nx.press_buttons(controller_index, [nxbt.Buttons.A], down=0.1, up=0.1, block=False)
 
 
 
