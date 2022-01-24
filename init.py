@@ -143,7 +143,7 @@ waitingInput = True
 while waitingInput:
     waitingInput = str(random.randint(1, 13))#input("Seconds:")
     print(waitingInput)
-    time.sleep(2)
+    #time.sleep(2)
 
     if waitingInput == "1":
         jumpLeft()
