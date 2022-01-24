@@ -54,7 +54,7 @@ def upCut():
 
 
         print(btPack)
-        for x in range(100):
+        for x in range(200):
             nx.set_controller_input( controller_index, btPack)
 
         btPack = nx.create_input_packet()
@@ -76,12 +76,12 @@ def downCut():
         btPack = nx.create_input_packet()
         lStick = btPack["L_STICK"]
         lStick["LS_DOWN"] = True
-        lStick["Y_VALUE"] = 100
+        lStick["Y_VALUE"] = -100
         btPack["L_STICK"] = lStick
 
 
         print(btPack)
-        for x in range(100):
+        for x in range(200):
             nx.set_controller_input( controller_index, btPack)
 
         btPack = nx.create_input_packet()
