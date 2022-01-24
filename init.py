@@ -54,7 +54,7 @@ def upCut():
 
 
         print(btPack)
-        for x in range(200):
+        for x in range(220):
             nx.set_controller_input( controller_index, btPack)
 
         btPack = nx.create_input_packet()
@@ -65,7 +65,7 @@ def upCut():
         btPack["A"] = True
 
         print(btPack)
-        for x in range(10):
+        for x in range(30):
             nx.set_controller_input( controller_index, btPack)
 
         btPack = nx.create_input_packet()
@@ -81,7 +81,7 @@ def downCut():
 
 
         print(btPack)
-        for x in range(200):
+        for x in range(220):
             nx.set_controller_input( controller_index, btPack)
 
         btPack = nx.create_input_packet()
@@ -92,7 +92,7 @@ def downCut():
         btPack["A"] = True
 
         print(btPack)
-        for x in range(10):
+        for x in range(30):
             nx.set_controller_input( controller_index, btPack)
 
         btPack = nx.create_input_packet()
@@ -181,10 +181,8 @@ while waitingInput:
     if waitingInput == "1":
         jumpLeft()
 
-
     if waitingInput == "2":
         jumpRight()
-
 
     if waitingInput == "3":
         right()
@@ -195,23 +193,19 @@ while waitingInput:
     if waitingInput == "5":
         up()
 
-
     if waitingInput == "6":
         down()
-
 
     if waitingInput == "7":
         jump()
 
-
     if waitingInput == "8":
         cut()
-
 
     if waitingInput == "9":
         clockwise()
 
-    if waitingInput == "0":
+    if waitingInput == "10":
         anticlockwise()
 
     if waitingInput == "11":
@@ -219,7 +213,6 @@ while waitingInput:
 
     if waitingInput == "12":
         upCut()
-
 
     if waitingInput == "13":
         downCut()
