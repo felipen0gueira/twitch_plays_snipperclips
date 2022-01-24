@@ -45,6 +45,59 @@ def jumpRight():
         btPack = nx.create_input_packet()
         nx.set_controller_input( controller_index, btPack)
 
+def upCut():
+        btPack = nx.create_input_packet()
+        lStick = btPack["L_STICK"]
+        lStick["LS_UP"] = True
+        lStick["Y_VALUE"] = 100
+        btPack["L_STICK"] = lStick
+
+
+        print(btPack)
+        for x in range(100):
+            nx.set_controller_input( controller_index, btPack)
+
+        btPack = nx.create_input_packet()
+        lStick = btPack["L_STICK"]
+        lStick["LS_UP"] = True
+        lStick["Y_VALUE"] = 100
+        btPack["L_STICK"] = lStick
+        btPack["A"] = True
+
+        print(btPack)
+        for x in range(10):
+            nx.set_controller_input( controller_index, btPack)
+
+        btPack = nx.create_input_packet()
+        nx.set_controller_input( controller_index, btPack)
+
+
+def downCut():
+        btPack = nx.create_input_packet()
+        lStick = btPack["L_STICK"]
+        lStick["LS_DOWN"] = True
+        lStick["Y_VALUE"] = 100
+        btPack["L_STICK"] = lStick
+
+
+        print(btPack)
+        for x in range(100):
+            nx.set_controller_input( controller_index, btPack)
+
+        btPack = nx.create_input_packet()
+        lStick = btPack["L_STICK"]
+        lStick["LS_DOWN"] = True
+        lStick["Y_VALUE"] = -100
+        btPack["L_STICK"] = lStick
+        btPack["A"] = True
+
+        print(btPack)
+        for x in range(10):
+            nx.set_controller_input( controller_index, btPack)
+
+        btPack = nx.create_input_packet()
+        nx.set_controller_input( controller_index, btPack)
+
 def right():
     nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 100, 0, tilted=0.2)
 
@@ -163,6 +216,15 @@ while waitingInput:
 
     if waitingInput == "11":
         recover()
+
+    if waitingInput == "12":
+        upCut()
+
+
+    if waitingInput == "13":
+        downCut()
+
+
 
 
 
