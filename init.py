@@ -15,8 +15,7 @@ print("Connected")
 
 
 def jumpLeft():
-
-    
+        print("jumpLeft()")
         btPack = nx.create_input_packet()
         lStick = btPack["L_STICK"]
         lStick["LS_LEFT"] = True
@@ -24,7 +23,6 @@ def jumpLeft():
         btPack["L_STICK"] = lStick
         btPack["B"] = True
 
-        print(btPack)
         for x in range(220):
             nx.set_controller_input( controller_index, btPack)
 
@@ -32,6 +30,7 @@ def jumpLeft():
         nx.set_controller_input( controller_index, btPack)
 
 def jumpRight():
+        print("jumpRight()")
         btPack = nx.create_input_packet()
         lStick = btPack["L_STICK"]
         lStick["LS_RIGHT"] = True
@@ -39,7 +38,6 @@ def jumpRight():
         btPack["L_STICK"] = lStick
         btPack["B"] = True
 
-        print(btPack)
         for x in range(220):
             nx.set_controller_input( controller_index, btPack)
 
@@ -47,14 +45,13 @@ def jumpRight():
         nx.set_controller_input( controller_index, btPack)
 
 def upCut():
+        print("upCut()")
         btPack = nx.create_input_packet()
         lStick = btPack["L_STICK"]
         lStick["LS_UP"] = True
         lStick["Y_VALUE"] = 100
         btPack["L_STICK"] = lStick
 
-
-        print(btPack)
         for x in range(220):
             nx.set_controller_input( controller_index, btPack)
 
@@ -74,14 +71,14 @@ def upCut():
 
 
 def downCut():
+    
+        print("downCut()")
         btPack = nx.create_input_packet()
         lStick = btPack["L_STICK"]
         lStick["LS_DOWN"] = True
         lStick["Y_VALUE"] = -100
         btPack["L_STICK"] = lStick
 
-
-        print(btPack)
         for x in range(220):
             nx.set_controller_input( controller_index, btPack)
 
@@ -100,32 +97,42 @@ def downCut():
         nx.set_controller_input( controller_index, btPack)
 
 def right():
+    print("right()")
     nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 100, 0, tilted=0.2)
 
 def left():
+    print("left()")
     nx.tilt_stick(controller_index, Sticks.LEFT_STICK, -100, 0, tilted=0.2)
 
 def up():
+    
+    print("up()")
     nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, 100, tilted=2)
 
 def down():
+    print("down()")
     nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 0, -100, tilted=2, released=0.1, block=False)
 
 def jump():
+    print("jump()")
     nx.press_buttons(controller_index, [nxbt.Buttons.B], down=2, up=0.1, block=False)
 
 def cut():
+    print("cut()")
     nx.press_buttons(controller_index, [nxbt.Buttons.A], down=0.1, up=0.1, block=False)
 
 def clockwise():
+    print("clockwise()")
     nx.press_buttons(controller_index, [nxbt.Buttons.R], down=0.2)
 
 
 def anticlockwise():
+    print("anticlockwise()")
     nx.press_buttons(controller_index, [nxbt.Buttons.L], down=0.2)
 
 
 def recover():
+    print("recover()")
     nx.press_buttons(controller_index, [nxbt.Buttons.Y], down=1.5)
 
 
@@ -134,9 +141,9 @@ def recover():
 waitingInput = True
 
 while waitingInput:
-    waitingInput = random.randint(0, 13)#input("Seconds:")
+    waitingInput = random.randint(1, 13)#input("Seconds:")
     print(waitingInput)
-    time.sleep(1)
+    time.sleep(2)
 
     if waitingInput == "1":
         jumpLeft()
