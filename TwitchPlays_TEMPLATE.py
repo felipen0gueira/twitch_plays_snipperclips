@@ -175,6 +175,8 @@ nx.wait_for_connection(controller_index)
 
 print("Connected")
 
+nx.press_buttons(controller_index, [nxbt.Buttons.A], down=0.1, up=0.1, block=False)
+
 ##########################################################
 
 # MESSAGE_RATE controls how fast we process incoming Twitch Chat messages. It's the number of seconds it will take to handle all messages in the queue.
