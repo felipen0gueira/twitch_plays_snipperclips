@@ -25,7 +25,7 @@ import keyboard
 import TwitchPlays_Connection
 #import pydirectinput
 import random
-import pyautogui
+#import pyautogui
 import concurrent.futures
 from TwitchPlays_KeyCodes import *
 
@@ -194,7 +194,7 @@ last_time = time.time()
 message_queue = []
 thread_pool = concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS)
 active_tasks = []
-pyautogui.FAILSAFE = False
+#pyautogui.FAILSAFE = False
 
 ##########################################################
 
