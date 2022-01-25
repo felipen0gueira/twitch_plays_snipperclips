@@ -23,7 +23,7 @@ TWITCH_CHANNEL = 'felipen0g' # Replace this with your Twitch username. Must be a
 
 import keyboard
 import TwitchPlays_Connection
-import pydirectinput
+#import pydirectinput
 import random
 import pyautogui
 import concurrent.futures
