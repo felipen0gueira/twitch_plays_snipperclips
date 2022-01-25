@@ -50,7 +50,7 @@ def jumpLeft():
         btPack["L_STICK"] = lStick
         btPack["B"] = True
 
-        for x in range(220):
+        for x in range(20):
             nx.set_controller_input( controller_index, btPack)
             time.sleep(1/120)  
 
@@ -67,7 +67,7 @@ def jumpRight():
         btPack["L_STICK"] = lStick
         btPack["B"] = True
 
-        for x in range(220):
+        for x in range(20):
             nx.set_controller_input( controller_index, btPack)
             time.sleep(1/120)  
 
@@ -83,7 +83,7 @@ def upCut():
         lStick["Y_VALUE"] = 100
         btPack["L_STICK"] = lStick
 
-        for x in range(220):
+        for x in range(50):
             nx.set_controller_input( controller_index, btPack)
             time.sleep(1/120)  
 
@@ -94,7 +94,7 @@ def upCut():
         btPack["L_STICK"] = lStick
         btPack["A"] = True
 
-        for x in range(30):
+        for x in range(10):
             nx.set_controller_input( controller_index, btPack)
             time.sleep(1/120)  
 
@@ -112,7 +112,7 @@ def downCut():
         lStick["Y_VALUE"] = -100
         btPack["L_STICK"] = lStick
 
-        for x in range(220):
+        for x in range(50):
             nx.set_controller_input( controller_index, btPack)
             time.sleep(1/120)  
 
@@ -123,7 +123,7 @@ def downCut():
         btPack["L_STICK"] = lStick
         btPack["A"] = True
 
-        for x in range(30):
+        for x in range(10):
             nx.set_controller_input( controller_index, btPack)
             time.sleep(1/120)  
 
