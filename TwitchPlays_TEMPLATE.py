@@ -50,7 +50,7 @@ def jumpLeft():
         btPack["L_STICK"] = lStick
         btPack["B"] = True
 
-        for x in range(20):
+        for x in range(50):
             nx.set_controller_input( controller_index, btPack)
             time.sleep(1/120)  
 
@@ -67,7 +67,7 @@ def jumpRight():
         btPack["L_STICK"] = lStick
         btPack["B"] = True
 
-        for x in range(20):
+        for x in range(50):
             nx.set_controller_input( controller_index, btPack)
             time.sleep(1/120)  
 
