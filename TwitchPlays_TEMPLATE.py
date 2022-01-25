@@ -27,7 +27,7 @@ import TwitchPlays_Connection
 import random
 #import pyautogui
 import concurrent.futures
-from TwitchPlays_KeyCodes import *
+#from TwitchPlays_KeyCodes import *
 
 import nxbt
 from nxbt import Buttons
