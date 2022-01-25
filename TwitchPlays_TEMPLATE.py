@@ -133,11 +133,11 @@ def downCut():
 
 def right():
     print("right()")
-    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 100, 0, tilted=0.2)
+    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 100, 0, tilted=0.1)
 
 def left():
     print("left()")
-    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, -100, 0, tilted=0.2)
+    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, -100, 0, tilted=0.1)
 
 def up():
     
@@ -253,13 +253,13 @@ def handle_message(message):
         if msg == "corta":
             cut()
 
-        if msg == "gira horario":
+        if msg == "gira" or "giro" or "girar":
             clockwise()
 
-        if msg == "gira anti-horario" or msg == "gira antihorario":
+        if msg == "gira anti-horario" or msg == "gira antihorario" or msg == "giro antihorario" or msg == "giro anti-horario":
             anticlockwise()
 
-        if msg == "recuperar":
+        if msg == "recupera":
             recover()
 
         if msg == "corte cima":
