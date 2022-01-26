@@ -229,43 +229,43 @@ def handle_message(message):
         # Example GTA V Code 
         ###################################
 
-        if msg == "pulo esquerda":
+        if msg == "pulo esquerda" or msg == "jump left":
             jumpLeft()
 
-        if msg == "pulo direita":
+        if msg == "pulo direita" or msg == "jump right":
             jumpRight()
 
-        if msg == "direita":
+        if msg == "direita" or msg == "right":
             right()
 
-        if msg == "esquerda":
+        if msg == "esquerda"  or msg == "left":
             left()
 
-        if msg == "cima":
+        if msg == "cima"  or msg == "up":
             up()
 
-        if msg == "baixo":
+        if msg == "baixo"  or msg == "down":
             down()
 
-        if msg == "pulo":
+        if msg == "pulo"  or msg == "jump":
             jump()
 
-        if msg == "corta":
+        if msg == "corta"  or msg == "cut":
             cut()
 
-        if msg == "gira" or "giro" or "girar":
+        if msg == "gira" or "giro" or "spin":
             clockwise()
 
-        if msg == "gira anti-horario" or msg == "gira antihorario" or msg == "giro antihorario" or msg == "giro anti-horario":
+        if msg == "spin left" or msg == "gira esquerda" or msg == "giro esquerda" or msg == "giro esquerda":
             anticlockwise()
 
-        if msg == "recupera":
+        if msg == "recupera" or msg == "recover" :
             recover()
 
-        if msg == "corte cima":
+        if msg == "corte cima" or msg == "up cut":
             upCut()
 
-        if msg == "corte baixo":
+        if msg == "corte baixo" or msg == "down cut":
             downCut()
 
 
