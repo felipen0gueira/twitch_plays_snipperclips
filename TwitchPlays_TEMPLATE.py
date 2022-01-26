@@ -253,7 +253,7 @@ def handle_message(message):
         if msg == "corta"  or msg == "cut":
             cut()
 
-        if msg == "gira" or "giro" or "spin":
+        if msg == "gira" or msg == "giro" or msg == "spin":
             clockwise()
 
         if msg == "spin left" or msg == "gira esquerda" or msg == "giro esquerda" or msg == "giro esquerda":
