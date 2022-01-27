@@ -133,11 +133,11 @@ def downCut():
 
 def right():
     print("right()")
-    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 100, 0, tilted=0.1)
+    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, 100, 0, tilted=0.5)
 
 def left():
     print("left()")
-    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, -100, 0, tilted=0.1)
+    nx.tilt_stick(controller_index, Sticks.LEFT_STICK, -100, 0, tilted=0.5)
 
 def up():
     
@@ -158,12 +158,12 @@ def cut():
 
 def clockwise():
     print("clockwise()")
-    nx.press_buttons(controller_index, [nxbt.Buttons.R], down=0.2)
+    nx.press_buttons(controller_index, [nxbt.Buttons.R], down=0.7)
 
 
 def anticlockwise():
     print("anticlockwise()")
-    nx.press_buttons(controller_index, [nxbt.Buttons.L], down=0.2)
+    nx.press_buttons(controller_index, [nxbt.Buttons.L], down=0.7)
 
 
 def recover():
